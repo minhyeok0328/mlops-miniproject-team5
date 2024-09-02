@@ -20,7 +20,7 @@ jobs:
 
     - name: Copy files via SSH
       run: |
-        scp -r -o StrictHostKeyChecking=no ./* ubuntu@3.39.65.132:/home/ubuntu/kubernetes/
+        scp -r -o StrictHostKeyChecking=no ./* ubuntu@3.39.65.132:/home/ubuntu/kubernetes
 
     # - name: Apply Kubernetes configuration
     #   run: |
