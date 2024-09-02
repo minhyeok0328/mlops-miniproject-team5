@@ -24,4 +24,4 @@ jobs:
 
     - name: Apply Kubernetes configuration
       run: |
-        ssh -o StrictHostKeyChecking=no ubuntu@3.39.65.132 'kubectl apply -f /home/ubuntu/kubernetes/'
+        ssh -o StrictHostKeyChecking=no ubuntu@3.39.65.132 'kubectl apply -k /home/ubuntu/kubernetes/*.yaml'
