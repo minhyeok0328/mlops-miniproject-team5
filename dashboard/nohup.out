@@ -1,0 +1,14 @@
+Forwarding from 0.0.0.0:10443 -> 8443
+Handling connection for 10443
+Handling connection for 10443
+Handling connection for 10443
+Handling connection for 10443
+Unable to listen on port 10443: Listeners failed to create with the following errors: [unable to create listener: Error listen tcp4 0.0.0.0:10443: bind: address already in use]
+error: unable to listen on any of the requested ports: [{10443 8443}]
+Unable to listen on port 10443: Listeners failed to create with the following errors: [unable to create listener: Error listen tcp4 0.0.0.0:10443: bind: address already in use]
+error: unable to listen on any of the requested ports: [{10443 8443}]
+Forwarding from 0.0.0.0:10443 -> 8443
+Forwarding from 0.0.0.0:10443 -> 8443
+Handling connection for 10443
+Handling connection for 10443
+Handling connection for 10443

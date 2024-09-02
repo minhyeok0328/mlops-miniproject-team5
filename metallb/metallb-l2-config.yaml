@@ -1,0 +1,11 @@
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: metallb-pool
+  namespace: metallb-system
+spec:
+  addresses:
+  - 3.39.65.132/32
+  - 192.168.10.0/24
+  - 192.168.9.1-192.168.9.5
+  - fc00:f853:0ccd:e799::/124
