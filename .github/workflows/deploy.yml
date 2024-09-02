@@ -22,6 +22,6 @@ jobs:
       run: |
         scp -r -o StrictHostKeyChecking=no ./* ubuntu@3.39.65.132:/home/ubuntu/kubernetes/
 
-    - name: Apply Kubernetes configuration
-      run: |
-        ssh -o StrictHostKeyChecking=no ubuntu@3.39.65.132 'kubectl apply -R -f /home/ubuntu/kubernetes/'
+    # - name: Apply Kubernetes configuration
+    #   run: |
+    #     ssh -o StrictHostKeyChecking=no ubuntu@3.39.65.132 'kubectl apply -R -f /home/ubuntu/kubernetes/'
