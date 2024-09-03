@@ -5,7 +5,7 @@ from airflow.operators.python import PythonOperator
 from airflow.models.variable import Variable
 
 XCOM_KEY = 'kma_data'
-KMA_TOKEN = Variable.get('KMA_TOKEN')
+KMA_API_KEY = Variable.get('KMA_API_KEY')
 KMA_API_URL = 'https://apihub.kma.go.kr/api/typ01/url/kma_sfctm2.php'
 
 def get_data(**context):
@@ -13,7 +13,7 @@ def get_data(**context):
         'tm': '202211301000',
         'stn': '0',
         'help': '1',
-        'authKey': KMA_TOKEN
+        'authKey': KMA_API_KEY
     }
     
     response = requests.get(KMA_API_URL, params=params)
