@@ -1,0 +1,10 @@
+hub:
+  config:
+    Authenticator:
+      admin_users:
+        - admin1
+        - admin2
+scheduling:
+  userScheduler:
+    enabled: false
+

@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: dashboard-ingress
+  namespace: kubernetes-dashboard
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - secretName: dashboard-tls
+  rules:
+  - http:
+      paths:
+        - path: /dashboard
+          pathType: Prefix
+          backend:
+            service:
+              name: kubernetes-dashboard-kong-proxy
+              port:
+                number: 443

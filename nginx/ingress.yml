@@ -1,19 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: airflow-ingress
-  namespace: airflow
+  name: ingress-test
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
   - http:
       paths:
-      - path: /airflow(/|$)(.*)
+      - path: /test
         pathType: Prefix
         backend:
           service:
-            name: airflow-webserver
+            name: service-test
             port:
               number: 80
+

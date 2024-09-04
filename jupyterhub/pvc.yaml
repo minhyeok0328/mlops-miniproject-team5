@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: jupyterhub-volume-1
+spec:
+  capacity:
+    storage: 10G
+  accessModes:
+  - ReadWriteOnce
+  local:
+    path: /home/ubuntu/mnt/jupyterhub
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - {key: kubernetes.io/hostname, operator: In, values: [ip-172-31-15-31]}
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: jupyterhub-volume-2
+spec:
+  capacity:
+    storage: 10G
+  accessModes:
+  - ReadWriteOnce
+  local:
+    path: /home/ubuntu/mnt/jupyterhub2
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - {key: kubernetes.io/hostname, operator: In, values: [ip-172-31-15-31]}
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: jupyterhub-volume-3
+spec:
+  capacity:
+    storage: 10G
+  accessModes:
+  - ReadWriteOnce
+  local:
+    path: /home/ubuntu/mnt/jupyterhub3
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - {key: kubernetes.io/hostname, operator: In, values: [ip-172-31-15-31]}
