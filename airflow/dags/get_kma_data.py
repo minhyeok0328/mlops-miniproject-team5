@@ -20,9 +20,7 @@ def get_current_hour_data(**context):
     }
 
     response = requests.get(KMA_API_URL, params=params)
-    response.raise_for_status()
-
-    data = response.json()
+    data = response.text
 
     context['task_instance'].xcom_push(key=XCOM_KEY, value=data)
 
